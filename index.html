@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Тест по финансовой грамотности</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- Общий заголовок теста над всеми экранами -->
+      <header class="page-header">
+        <h1 class="page-title">Тест по финансовой грамотности</h1>
+      </header>
+
+      <!-- Экран приветствия -->
+      <section id="welcome-screen" class="card">
+        <h1 class="title">Добро пожаловать в тест</h1>
+        <p class="subtitle">
+          Пройдите короткий тест из 4 вопросов и узнайте свой уровень финансовой
+          грамотности и подходящий продукт для вас.
+        </p>
+        <button id="start-btn" class="btn btn-primary">Начать тест</button>
+      </section>
+
+      <!-- Экран с вопросами -->
+      <section id="quiz-screen" class="card hidden">
+        <div class="progress" id="progress-text"></div>
+        <h2 id="question-text" class="question"></h2>
+        <div id="options-container" class="options"></div>
+        <p id="question-error" class="error-message"></p>
+        <div class="controls">
+          <button id="next-btn" class="btn btn-primary">Дальше</button>
+        </div>
+      </section>
+
+      <!-- Экран с формой контактов -->
+      <section id="contact-screen" class="card hidden">
+        <h2 class="subtitle">Оставьте контакты, чтобы увидеть результат</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Имя</label>
+            <input type="text" id="name" name="name" required />
+            <p class="error-message" id="name-error"></p>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required />
+            <p class="error-message" id="email-error"></p>
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7..." required />
+            <p class="error-message" id="phone-error"></p>
+          </div>
+          <button type="submit" class="btn btn-primary">Узнать результат</button>
+        </form>
+      </section>
+
+      <!-- Экран с результатом -->
+      <section id="result-screen" class="card hidden">
+        <h2 id="result-title" class="title"></h2>
+        <p id="result-description" class="subtitle"></p>
+        <div class="product">
+          <h3 id="product-title"></h3>
+          <p id="product-description"></p>
+          <button id="buy-btn" class="btn btn-secondary">Купить продукт</button>
+        </div>
+        <button id="restart-btn" class="btn btn-link">Пройти тест ещё раз</button>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+

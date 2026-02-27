@@ -1,0 +1,232 @@
+/* Базовые стили страницы */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #0f3d2e, #1f7a4d);
+  color: #0f2220;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app {
+  width: 100%;
+  max-width: 640px;
+  padding: 16px;
+}
+
+.page-header {
+  /* Отдельный блок заголовка над зонами с карточками */
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.page-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 700;
+  color: #e9f7f0;
+}
+
+.card {
+  /* Светлый фон с лёгким зелёным оттенком вместо белого */
+  background-color: #eaf5f0;
+  border-radius: 16px;
+  padding: 24px 20px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(12, 83, 52, 0.15);
+}
+
+.hidden {
+  display: none;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0b3c2b;
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #325348;
+  line-height: 1.5;
+}
+
+.question {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.progress {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #4a7565;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.option {
+  border-radius: 10px;
+  border: 1px solid rgba(12, 83, 52, 0.25);
+  padding: 10px 12px;
+  /* Мягкий зелёный фон вместо белого */
+  background-color: #e8f3ed;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.option input {
+  accent-color: #1f7a4d;
+}
+
+.option-text {
+  flex: 1;
+}
+
+.option:hover {
+  background-color: #dbeee5;
+  border-color: #1f7a4d;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease, transform 0.05s ease;
+}
+
+.btn-primary {
+  background-color: #1f7a4d;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(10, 71, 45, 0.45);
+}
+
+.btn-primary:hover {
+  background-color: #196544;
+}
+
+.btn-primary:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 8px rgba(10, 71, 45, 0.45);
+}
+
+.btn-secondary {
+  /* Вторичная кнопка тоже без белого фона */
+  background-color: #e8f3ed;
+  color: #1f7a4d;
+  border: 1px solid #1f7a4d;
+}
+
+.btn-secondary:hover {
+  background-color: #dbeee5;
+}
+
+.btn-link {
+  background: none;
+  border: none;
+  color: #1f7a4d;
+  padding: 8px 0 0;
+  font-size: 14px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.form-group {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #214538;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(12, 83, 52, 0.25);
+  font-size: 14px;
+  /* Лёгкий зелёный фон для полей ввода вместо белого */
+  background-color: #f5faf7;
+}
+
+input:focus {
+  outline: none;
+  border-color: #1f7a4d;
+  box-shadow: 0 0 0 2px rgba(31, 122, 77, 0.2);
+}
+
+.error-message {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #c0392b;
+  min-height: 16px;
+}
+
+.product {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #ecf7f1;
+  border: 1px solid rgba(12, 83, 52, 0.2);
+}
+
+.product h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #0b3c2b;
+}
+
+.product p {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #30463f;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 20px 16px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .question {
+    font-size: 18px;
+  }
+}
+
