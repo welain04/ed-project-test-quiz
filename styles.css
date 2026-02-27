@@ -7,8 +7,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #0f3d2e, #1f7a4d);
-  color: #0f2220;
+  /* Более тёмный зелёно-бирюзовый фон (в духе прикреплённого фото) */
+  background: linear-gradient(135deg, #031f1a, #0a3b33 45%, #0b5a4c);
+  color: #e9f7f0;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -30,17 +31,19 @@ body {
 .page-title {
   margin: 0;
   font-size: 26px;
-  font-weight: 700;
-  color: #e9f7f0;
+  /* Чуть более акцентный заголовок */
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  color: #bff6e7;
 }
 
 .card {
-  /* Светлый фон с лёгким зелёным оттенком вместо белого */
-  background-color: #eaf5f0;
+  /* Темнее, но читаемо и гармонично с фоном */
+  background-color: rgba(7, 38, 32, 0.78);
   border-radius: 16px;
   padding: 24px 20px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(12, 83, 52, 0.15);
+  border: 1px solid rgba(191, 246, 231, 0.12);
 }
 
 .hidden {
@@ -52,13 +55,13 @@ body {
   margin-bottom: 12px;
   font-size: 24px;
   font-weight: 700;
-  color: #0b3c2b;
+  color: #d6fff3;
 }
 
 .subtitle {
   margin-top: 0;
   margin-bottom: 20px;
-  color: #325348;
+  color: rgba(233, 247, 240, 0.85);
   line-height: 1.5;
 }
 
@@ -72,7 +75,7 @@ body {
 .progress {
   font-size: 14px;
   margin-bottom: 8px;
-  color: #4a7565;
+  color: rgba(233, 247, 240, 0.75);
 }
 
 .options {
@@ -83,10 +86,10 @@ body {
 
 .option {
   border-radius: 10px;
-  border: 1px solid rgba(12, 83, 52, 0.25);
+  border: 1px solid rgba(191, 246, 231, 0.14);
   padding: 10px 12px;
-  /* Мягкий зелёный фон вместо белого */
-  background-color: #e8f3ed;
+  /* Темнее карточки, но заметно как интерактивный элемент */
+  background-color: rgba(10, 67, 57, 0.55);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -103,8 +106,8 @@ body {
 }
 
 .option:hover {
-  background-color: #dbeee5;
-  border-color: #1f7a4d;
+  background-color: rgba(15, 94, 79, 0.65);
+  border-color: rgba(191, 246, 231, 0.28);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -125,13 +128,13 @@ body {
 }
 
 .btn-primary {
-  background-color: #1f7a4d;
-  color: #ffffff;
+  background-color: #13a184;
+  color: #081f1a;
   box-shadow: 0 6px 14px rgba(10, 71, 45, 0.45);
 }
 
 .btn-primary:hover {
-  background-color: #196544;
+  background-color: #0f8a71;
 }
 
 .btn-primary:active {
@@ -140,20 +143,19 @@ body {
 }
 
 .btn-secondary {
-  /* Вторичная кнопка тоже без белого фона */
-  background-color: #e8f3ed;
-  color: #1f7a4d;
-  border: 1px solid #1f7a4d;
+  background-color: rgba(10, 67, 57, 0.55);
+  color: #bff6e7;
+  border: 1px solid rgba(191, 246, 231, 0.24);
 }
 
 .btn-secondary:hover {
-  background-color: #dbeee5;
+  background-color: rgba(15, 94, 79, 0.65);
 }
 
 .btn-link {
   background: none;
   border: none;
-  color: #1f7a4d;
+  color: #bff6e7;
   padding: 8px 0 0;
   font-size: 14px;
   text-decoration: underline;
@@ -169,7 +171,7 @@ body {
 label {
   margin-bottom: 4px;
   font-size: 14px;
-  color: #214538;
+  color: rgba(233, 247, 240, 0.9);
 }
 
 input[type="text"],
@@ -177,22 +179,22 @@ input[type="email"],
 input[type="tel"] {
   padding: 8px 10px;
   border-radius: 8px;
-  border: 1px solid rgba(12, 83, 52, 0.25);
+  border: 1px solid rgba(191, 246, 231, 0.18);
   font-size: 14px;
-  /* Лёгкий зелёный фон для полей ввода вместо белого */
-  background-color: #f5faf7;
+  background-color: rgba(7, 38, 32, 0.55);
+  color: #e9f7f0;
 }
 
 input:focus {
   outline: none;
-  border-color: #1f7a4d;
-  box-shadow: 0 0 0 2px rgba(31, 122, 77, 0.2);
+  border-color: rgba(191, 246, 231, 0.55);
+  box-shadow: 0 0 0 2px rgba(19, 161, 132, 0.25);
 }
 
 .error-message {
   margin: 4px 0 0;
   font-size: 13px;
-  color: #c0392b;
+  color: #ff7b6e;
   min-height: 16px;
 }
 
@@ -200,20 +202,20 @@ input:focus {
   margin-top: 16px;
   padding: 16px;
   border-radius: 12px;
-  background-color: #ecf7f1;
-  border: 1px solid rgba(12, 83, 52, 0.2);
+  background-color: rgba(10, 67, 57, 0.35);
+  border: 1px solid rgba(191, 246, 231, 0.12);
 }
 
 .product h3 {
   margin-top: 0;
   margin-bottom: 8px;
-  color: #0b3c2b;
+  color: #d6fff3;
 }
 
 .product p {
   margin-top: 0;
   margin-bottom: 12px;
-  color: #30463f;
+  color: rgba(233, 247, 240, 0.85);
 }
 
 @media (max-width: 480px) {

@@ -193,26 +193,29 @@ contactForm.addEventListener("submit", (event) => {
 
   // Проверка имени
   if (!nameInput.value.trim()) {
-    nameError.textContent = "Введите ваше имя.";
+    nameError.textContent = "Введите имя (например, Анна).";
     hasError = true;
   }
 
   // Простая проверка email
   if (!emailInput.value.trim()) {
-    emailError.textContent = "Введите ваш email.";
+    emailError.textContent = "Введите email (например, anna@example.ru).";
     hasError = true;
   } else if (!/^\S+@\S+\.\S+$/.test(emailInput.value.trim())) {
-    emailError.textContent = "Проверьте правильность email.";
+    emailError.textContent =
+      "Email введён в неверном формате. Пример: anna@example.ru";
     hasError = true;
   }
 
   // Простая проверка телефона
   const phoneValue = phoneInput.value.trim();
   if (!phoneValue) {
-    phoneError.textContent = "Введите номер телефона.";
+    phoneError.textContent =
+      "Введите номер телефона (например, +7 900 123-45-67).";
     hasError = true;
   } else if (phoneValue.replace(/\D/g, "").length < 10) {
-    phoneError.textContent = "Пожалуйста, введите корректный номер телефона.";
+    phoneError.textContent =
+      "Номер телефона слишком короткий. Введите минимум 10 цифр (можно с пробелами и дефисами).";
     hasError = true;
   }
 
